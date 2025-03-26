@@ -30,7 +30,7 @@ class Handler
             throw new Exception('Пустые значения');
         }
 
-        $pattern = '/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/';
+        $pattern = '/^[\w.-]+@([^\W_,]+\.?)+[a-zA-Z]{2,4}$/';
         if (!preg_match($pattern, $data['email'])) {
             throw new Exception('Невалидный email');
         }

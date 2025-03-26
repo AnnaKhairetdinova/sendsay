@@ -34,10 +34,6 @@ class SendsayAPI
      */
     public function auth(): bool
     {
-        if ($this->session) {
-            return true;
-        }
-
         $response = $this->makeRequest([
             'action' => 'login',
             'apikey' => $this->apiKey
